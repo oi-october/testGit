@@ -43,5 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation project(':lib_test')
-    //implementation 'com.xieql.xieql1234:lib_test:1.0.2'
+    //implementation 'com.xieql.xieql1234:lib_test:1.0.2'  //本地repo
+    //implementation 'com.github.xieql1234:testGit:1.0.2'  //jitpack
 }

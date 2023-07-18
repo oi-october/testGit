@@ -44,6 +44,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
+
 //源文件
 task sourceJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
@@ -55,11 +56,21 @@ afterEvaluate {
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
+                artifact sourceJar  //上传源代码
                 from components.release
-                groupId = 'com.github.xieql1234'
+                groupId = 'com.xieql.xieql1234'
                 artifactId = 'lib_test'
-                version = '1.0'
+                version = '1.0.2'
             }
         }
+
+        //调试时候发布到本地
+        repositories {
+            maven {
+                url "${rootDir}/repo"
+            }
+        }
+
     }
+
 }

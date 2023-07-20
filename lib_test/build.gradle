@@ -4,6 +4,10 @@ plugins {
     id 'maven-publish'
 }
 
+group = 'com.xieql.testGit'  //指定jetpack 的 groupId
+version = '1.0.4'  //指定version
+
+
 android {
     namespace 'com.xieql.lib.test'
     compileSdk 33
